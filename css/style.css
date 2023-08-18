@@ -259,71 +259,71 @@ section {
   padding: 1rem 0;
 }
 
-.pircing {
+.pricing {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   gap: 1.5rem;
 }
-.pircing .information span {
+.pricing .information span {
   font-size: 2rem;
   color: #f00;
 }
-.pircing .information h3 {
+.pricing .information h3 {
   font-size: 4rem;
   padding-top: 0.5rem;
   color: #fff;
 }
-.pircing .information p {
+.pricing .information p {
   line-height: 2;
   padding: 1rem 0;
   font-size: 1.4rem;
   color: #aaa;
 }
-.pircing .information p i {
+.pricing .information p i {
   padding-right: 1rem;
   color: #f00;
 }
-.pircing .plan {
+.pricing .plan {
   text-align: center;
   padding: 2rem;
 }
-.pircing .plan.basic {
+.pricing .plan.basic {
   background: linear-gradient(130deg, #111 93%, transparent 90%);
 }
-.pircing .plan h3 {
+.pricing .plan h3 {
   font-size: 2.5rem;
   margin: 1rem 0;
   color: #fff;
 }
-.pircing .plan .price {
+.pricing .plan .price {
   font-size: 5rem;
   font-weight: bolder;
   color: #f00;
 }
-.pircing .plan .price span {
+.pricing .plan .price span {
   color: #fff;
   font-size: 2rem;
 }
-.pircing .plan p {
+.pricing .plan p {
   line-height: 2;
   padding: 1rem 0;
   font-size: 1.4rem;
   color: #aaa;
 }
-.pircing .plan p i {
+.pricing .plan p i {
   padding-right: 1rem;
   color: #f00;
 }
-.pircing .plan .list {
+.pricing .plan .list {
   padding: 1rem 0;
 }
-.pircing .plan .list p {
+.pricing .plan .list p {
   line-height: 2;
   padding: 1rem 0;
   font-size: 1.4rem;
   color: #aaa;
 }
-.pircing .plan .list p i {
+.pricing .plan .list p i {
   padding-right: 1rem;
   color: #f00;
 }
