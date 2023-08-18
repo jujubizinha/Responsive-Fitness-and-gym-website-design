@@ -17,6 +17,12 @@ $white: #fff;
 $light-white: #aaa;
 $light-bg: #111;
 
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -40,6 +46,33 @@ body {
 
 section {
   padding: 5rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 0.1rem;
+    width: 100%;
+    background: $light-white;
+    z-index: -1;
+  }
+
+  span {
+    font-size: 3rem;
+    color: $red;
+    background: $black;
+    padding: 0.5rem 1.5rem;
+    border: 0.1rem solid $light-white;
+    border-radius: 0.5rem;
+  }
 }
 
 .btn {
@@ -217,7 +250,140 @@ section {
   }
 }
 
-// media queries
+.features .box-container {
+  @include grid(32rem);
+  gap: 0;
+
+  .box {
+    background: $light-bg;
+
+    &.second {
+      display: flex;
+      flex-flow: column-reverse;
+    }
+
+    &:hover .image img {
+      transform: scale(1.1);
+    }
+
+    .image {
+      height: 30rem;
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+      text-align: center;
+
+      img {
+        height: 9rem;
+        margin-bottom: 1rem;
+        filter: invert(1);
+      }
+      h3 {
+        font-size: 2rem;
+        color: $red;
+      }
+
+      p {
+        line-height: 2;
+        font-size: 1.5rem;
+        color: $light-white;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+.pircing {
+  @include grid(32rem);
+
+  .information {
+    span {
+      font-size: 2rem;
+      color: $red;
+    }
+
+    h3 {
+      font-size: 4rem;
+      padding-top: 0.5rem;
+      color: $white;
+    }
+
+    p {
+      line-height: 2;
+      padding: 1rem 0;
+      font-size: 1.4rem;
+      color: $light-white;
+
+      i {
+        padding-right: 1rem;
+        color: $red;
+      }
+    }
+  }
+
+  .plan {
+    text-align: center;
+    padding: 2rem;
+
+    &.basic {
+      background: linear-gradient(130deg, $light-bg 93%, transparent 90%);
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      color: $white;
+    }
+
+    .price {
+      font-size: 5rem;
+      font-weight: bolder;
+      color: $red;
+
+      span {
+        color: $white;
+        font-size: 2rem;
+      }
+    }
+    p {
+      line-height: 2;
+      padding: 1rem 0;
+      font-size: 1.4rem;
+      color: $light-white;
+
+      i {
+        padding-right: 1rem;
+        color: $red;
+      }
+    }
+    .list {
+      padding: 1rem 0;
+
+      p {
+        line-height: 2;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        color: $light-white;
+
+        i {
+          padding-right: 1rem;
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+// media queries ///
 
 @media (max-width: 991px) {
   html {
@@ -286,6 +452,10 @@ section {
     content .title {
       font-size: 3rem;
     }
+  }
+
+  .features .box-container .box.second {
+    flex-flow: column;
   }
 }
 
