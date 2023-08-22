@@ -59,7 +59,7 @@ var swiper = new Swiper(".blogs-slider", {
     768: {
       slidesPerView: 2,
     },
-    991: {
+    992: {
       slidesPerView: 3,
     },
   },
